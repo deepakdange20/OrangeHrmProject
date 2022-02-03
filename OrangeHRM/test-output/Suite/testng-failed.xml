@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.orange.listener.CustomListener"/>
+    <listener class-name="com.orange.listener.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.orange.test.LoginPageTest">
+        <methods>
+          <include name="verifyElemetsVisibilityTest"/>
+          <include name="verifyForgotPasswordLink"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="logOutApp"/>
+        </methods>
+      </class> <!-- com.orange.test.LoginPageTest -->
+      <class name="com.orange.test.AddEmployeeTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="uplaodfile"/>
+          <include name="verifyaddEmployee"/>
+        </methods>
+      </class> <!-- com.orange.test.AddEmployeeTest -->
+      <class name="com.orange.test.HomePageTest">
+        <methods>
+          <include name="initialization"/>
+          <include name="verifyAddEmployeeLink"/>
+          <include name="logOutApp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="VerifyEmployeeLink"/>
+        </methods>
+      </class> <!-- com.orange.test.HomePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
